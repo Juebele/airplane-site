@@ -4,7 +4,7 @@ import logo from '../Assets/hangar-logo.png'
 
 const Header = () => {
     return (
-        <div class='container'>
+        <div class='container-1'>
             <div>
                 <img id='image-1' src={logo} alt="Logo"/>
             </div>
