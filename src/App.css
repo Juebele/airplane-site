@@ -1,5 +1,5 @@
 * {
-  font-family: 'Ysabeau', sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Component stylings */
@@ -23,25 +23,19 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: darkorchid;
-}
-.container-2 > div:nth-child(2) {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.container-3 {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: mediumseagreen;
 }
 
 .image {
+  float: right;
+  width: 50%;
+  height: auto;
+  padding: 1em;
 }
 
 .content {
+  text-align: justify;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 1em;
 }
 
 .App {

@@ -5,7 +5,7 @@ import forces from '../../Assets/four-forces.png'
 
 const FourForces = () => {
     return (
-        <div class='container-3'>
+        <div>
                 <img class='image' src={forces}/>
             <div class='content'>
                 <h1>Four Forces of Flight</h1>
