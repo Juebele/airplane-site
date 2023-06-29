@@ -1,6 +1,5 @@
 * {
   font-family: 'Ysabeau', sans-serif;
-  background-color: aquamarine;
 }
 
 /* Component stylings */
@@ -16,6 +15,7 @@ p {
 .container-1 {
   display: flex;
   justify-content: space-between;
+  background-color: burlywood;
 }
 
 .container-2 {
@@ -23,12 +23,25 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: darkorchid;
 }
 .container-2 > div:nth-child(2) {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.container-3 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: mediumseagreen;
+}
+
+.image {
+}
+
+.content {
 }
 
 .App {
