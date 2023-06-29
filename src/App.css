@@ -1,3 +1,7 @@
+* {
+  font-family: 'Ysabeau', sans-serif;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -5,6 +9,11 @@
 
 #image-1 {
   max-width: 25em;
+}
+
+#hero {
+  background-size: cover;
+  max-width: 100%;
 }
 
 .App {
