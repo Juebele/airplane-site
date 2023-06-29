@@ -6,7 +6,7 @@ import forces from '../../Assets/four-forces.png'
 const FourForces = () => {
     return (
         <div>
-                <img class='image' src={forces}/>
+            <img class='image' src={forces} />
             <div class='content'>
                 <h1>Four Forces of Flight</h1>
                 <p>There are four main forces that act on an airplane in flight, and you’ve probably heard of them already.</p>

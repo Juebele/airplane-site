@@ -47,6 +47,10 @@ p {
   pointer-events: none;
 }
 
+#Footer p{
+  font-size: 5px;
+}
+
 /* ID stylings */
 #image-1 {
   max-width: 25em;
