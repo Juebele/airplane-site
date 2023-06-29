@@ -1,10 +1,15 @@
 * {
   font-family: 'Ysabeau', sans-serif;
+  background-color: aquamarine;
 }
 
 /* Component stylings */
 li {
   list-style: none;
+}
+
+p {
+  font-size: 1.5em;
 }
 
 /* Class stylings */
@@ -43,6 +48,11 @@ li {
 #hero {
   background-size: cover;
   max-width: 100%;
+}
+
+#footer {
+  display: flex;
+  justify-content: end;
 }
 
 /* Default React App Stuff */

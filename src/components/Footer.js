@@ -4,7 +4,7 @@ import '../App.css';
 const Footer = () => {
     return (
         <div>
-            <p>This is the Footer doc</p>
+            <p id='footer'>Copyright 2023 James Uebele</p>
         </div>
     )
 }
