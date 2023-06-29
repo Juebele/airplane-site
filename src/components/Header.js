@@ -1,14 +1,15 @@
 import React from 'react';
 import '../App.css';
+import logo from '../Assets/hangar-logo.png'
 
 const Header = () => {
     return (
         <div class='container'>
             <div>
-                <img src='../Assets/hangar-logo.png'></img>
+                <img id='image-1' src={logo} alt="Logo"/>
             </div>
             <div>
-                <p>Welcome to my site!</p>
+                <h1>Welcome to the Hangar</h1>
             </div>
             <div>
                 <ul>

@@ -3,9 +3,18 @@
   justify-content: space-between;
 }
 
+#image-1 {
+  max-width: 25em;
+}
+
 .App {
   text-align: center;
 }
+
+li {
+  list-style: none;
+}
+
 
 .App-logo {
   height: 40vmin;
