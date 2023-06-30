@@ -1,13 +1,16 @@
+// Necessary Imports
 import React, { useState } from 'react';
 import '../App.css';
 import FourForces from './sub-components/four-forces'
 import Aerodynamics from './sub-components/aerodynamics';
 import StallsSpins from './sub-components/stalls-spins';
 import Airspeed from './sub-components/airspeed';
-import TestSubComponent from './sub-components/test-sub-component';
+// import TestSubComponent from './sub-components/test-sub-component';
 
 
 export default function Main() {
+
+    // Logic to change tabs when you click on the buttons
     const [activeTab, setActiveTab] = useState(0);
     const handleTabClick = (index) => {
         setActiveTab(index);
