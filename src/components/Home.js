@@ -4,16 +4,14 @@ import '../App.css';
 
 const Home = () => {
     return (
-        <div id='homepage-bg'>
+        <div id='homepage-bg' class='home-text'>
             <div id='home-el'>
-                <h1 class='home-text'>
-                    Welcome to the Hangar!
+                <h1>
+                    Welcome to the Hangar
                 </h1>
-                <div>
-                    <h2 class='home-text'>
-                        Learn about Airplanes!
-                    </h2>
-                </div>
+                    <h6>
+                    “Adventure is worthwhile in itself.” - Amelia Earhart
+                    </h6>
                 <button>
                     <Link to ={'/Learning'}>
                         Learn more!
