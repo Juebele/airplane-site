@@ -15,7 +15,6 @@ p {
 .container-1 {
   display: flex;
   justify-content: space-between;
-  background-color: burlywood;
 }
 
 .container-2 {
@@ -45,10 +44,6 @@ p {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-#Footer p{
-  font-size: 5px;
 }
 
 /* ID stylings */

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 import FourForces from './sub-components/four-forces'
 import Aerodynamics from './sub-components/aerodynamics';
@@ -20,8 +20,6 @@ export default function Main() {
                 <button onClick={() => handleTabClick(1)}>Forces of Flight</button>
                 <button onClick={() => handleTabClick(2)}>AoA, Stalls, and Spins</button>
                 <button onClick={() => handleTabClick(3)}>Airspeed</button>
-                <button>Button 4</button>
-                <button>Button 5</button>
             </div>
             <div>
                 <div>
