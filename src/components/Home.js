@@ -7,7 +7,7 @@ const Home = () => {
         <div id='homepage-bg' class='home-text'>
             <div id='home-el'>
                 <h1>
-                    Welcome to the Hangar
+                    Hangar 9
                 </h1>
                     <h6>
                     “Adventure is worthwhile in itself.” - Amelia Earhart

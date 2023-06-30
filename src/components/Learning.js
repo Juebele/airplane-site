@@ -1,10 +1,14 @@
 import React from 'react';
 import '../App.css';
 import Main from './Main';
+import Header from './Header';
 
 const Learning = () => {
     return (
-        <div><Main /></div>
+        <div>
+            <Header />
+            <Main />
+        </div>
     )
 }
 

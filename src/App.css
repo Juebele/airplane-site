@@ -37,7 +37,8 @@ button {
 /* Class stylings */
 .container-1 {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
 }
 
 .container-2 {
@@ -74,18 +75,33 @@ button {
   color: var(--color1);
   text-shadow: 5px 5px 5px black;
 }
+
 .home-text h1 {
   font-size: 5em;
 }
+
 .home-text h6 {
   font-size: 1em;
 }
 
+.blank-button {
+  background-color: transparent;
+}
+
+
 /* ID stylings */
 
+#item-1 {
+  text-align: left;
+}
+
+#item-2 {
+  flex-grow: 1;
+  text-align: center;
+}
 
 #image-1 {
-  max-width: 25em;
+  max-width: 5em;
 }
 
 #hero {
