@@ -9,6 +9,7 @@ import Home from './components/Home';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import About from './components/About';
+import News from './components/News';
 
 
 function App() {
@@ -28,6 +29,10 @@ function App() {
           <Route
             path='/about'
             element={<About />}
+          />
+          <Route
+            path='/news'
+            element={<News />}
           />
         </Routes>
       <Footer />

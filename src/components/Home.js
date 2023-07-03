@@ -17,6 +17,11 @@ const Home = () => {
                         Learn more!
                     </button>
                 </Link>
+                <Link to={'/News'}>
+                    <button>
+                        Read up on aviation news here!
+                    </button>
+                </Link>
                 
             </div>
         </div>
