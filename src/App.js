@@ -8,17 +8,8 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
+import About from './components/About';
 
-// function App() {
-//   return (
-//     <div>
-//     <Header/>
-//     <Hero/>
-//     <Main/>
-//     <Footer/>
-//     </div>
-//   );
-// }
 
 function App() {
   return (
@@ -34,9 +25,13 @@ function App() {
             path="/learning"
             element={<Learning />}
           />
+          <Route
+            path='/about'
+            element={<About />}
+          />
         </Routes>
-      </Router>
       <Footer />
+      </Router>
     </div>
   )
 }

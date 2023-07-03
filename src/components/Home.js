@@ -17,6 +17,7 @@ const Home = () => {
                         Learn more!
                     </button>
                 </Link>
+                
             </div>
         </div>
     )
