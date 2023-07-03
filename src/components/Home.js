@@ -7,16 +7,16 @@ const Home = () => {
         <div id='homepage-bg' class='home-text'>
             <div id='home-el'>
                 <h1>
-                    Hangar 9
+                    Hangar 10
                 </h1>
-                    <h6>
+                <h6>
                     “Adventure is worthwhile in itself.” - Amelia Earhart
-                    </h6>
-                <button>
-                    <Link to ={'/Learning'}>
+                </h6>
+                <Link to={'/Learning'}>
+                    <button>
                         Learn more!
-                    </Link>
-                </button>
+                    </button>
+                </Link>
             </div>
         </div>
     )

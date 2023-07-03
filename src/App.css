@@ -2,13 +2,13 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   --logo-color: #0470D3;
   --color1: whitesmoke;
-  --color2: #FAF0E4;
-  --color3: #9BCDD2;
-  --color4: #FF8551;
-  --color5: #FFDEDE;
+  --color2: #F7FBFC;
+  --color3: #D6E6F2;
+  --color4: #B9D7EA;
+  --color5: #769FCD;
   --color6: black;
   --transparent1: rgba(245, 245, 245, 0);
-  --transparent2: #faf0e410;
+  --transparent2: #f7fbfcd6;
   --transparent6: rgba(0, 0, 0, 0.8);
 }
 
@@ -32,9 +32,21 @@ button {
   padding: 1em;
   border-radius: 1em;
   border-style: none;
+  cursor: pointer;
 }
 
 /* Class stylings */
+
+.header {
+  background-color: var(--color3);
+  margin-bottom: 1rem;
+}
+
+.learning-button {
+  margin: 0 .5em 0 .5em;
+  cursor: pointer;
+}
+
 .container-1 {
   display: flex;
   align-items: center;

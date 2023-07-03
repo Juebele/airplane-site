@@ -19,10 +19,10 @@ export default function Main() {
     return (
         <div class='container-2'>
             <div>
-                <button onClick={() => handleTabClick(0)}>Aerodynamics</button>
-                <button onClick={() => handleTabClick(1)}>Forces of Flight</button>
-                <button onClick={() => handleTabClick(2)}>AoA, Stalls, and Spins</button>
-                <button onClick={() => handleTabClick(3)}>Airspeed</button>
+                <button class='learning-button' onClick={() => handleTabClick(0)}>Aerodynamics</button>
+                <button class='learning-button' onClick={() => handleTabClick(1)}>Forces of Flight</button>
+                <button class='learning-button' onClick={() => handleTabClick(2)}>AoA, Stalls, and Spins</button>
+                <button class='learning-button' onClick={() => handleTabClick(3)}>Airspeed</button>
             </div>
             <div>
                 <div>
