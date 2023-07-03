@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
-import logo from '../Assets/hangar-logo.png'
+import logo from '../Assets/hangar-icon-100.png'
 import LearningHeader from './sub-components/learning-header';
 
 const Header = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import logo from './logo.svg';
+import logo from './Assets/hangar-icon-100.png';
 import './App.css';
 import Main from './components/Main';
 import Learning from './components/Learning';

@@ -29,8 +29,8 @@ a {
 
 button {
   background-color: var(--color4);
-  padding: 1em;
-  border-radius: 1em;
+  padding: .5em;
+  border-radius: 1rem;
   border-style: none;
   cursor: pointer;
 }
@@ -114,6 +114,11 @@ button {
 
 #image-1 {
   max-width: 5em;
+}
+
+#headshot {
+  width: 200px;
+  height: auto;
 }
 
 #hero {
