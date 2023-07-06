@@ -10,25 +10,27 @@ function Footer() {
     const isNewsPage = location.pathname === '/news'
 
     return (
-        <footer class='container-1'>
-            <p id='footer'>Copyright 2023 James Uebele</p>
-            <div>
+        <footer class='container-footer'>
+            <div id='footer-left'>
+                <Link to={'/'}>
+                    <button style={{ color: isHomePage ? 'white' : 'black', backgroundColor: isHomePage ? 'gray' : 'transparent', borderRadius: '0 10px 0 0', }}>
+                        Home
+                    </button>
+                </Link>
+                <Link to={'/about'}>
+                    <button style={{ color: isAboutPage ? 'white' : 'black', backgroundColor: isAboutPage ? 'gray' : 'transparent', borderRadius: '10px 10px 0 0', }}>
+                        About us
+                    </button>
+                </Link>
+                <Link to={'/news'}>
+                    <button style={{ color: isNewsPage ? 'white' : 'black', backgroundColor: isNewsPage ? 'gray' : 'transparent', borderRadius: '10px 10px 0 0', }}>
+                        News
+                    </button>
+                </Link>
             </div>
-            <Link to={'/'}>
-                <button style={{ color: isHomePage ? 'white' : 'black' , backgroundColor: isHomePage ? 'gray' : 'transparent' , borderRadius: '0 10px 0 0',}}>
-                    Home
-                </button>
-            </Link>
-            <Link to={'/about'}>
-                <button style={{ color: isAboutPage ? 'white' : 'black' , backgroundColor: isAboutPage ? 'gray' : 'transparent' , borderRadius: '10px 10px 0 0',}}>
-                    About us
-                </button>
-            </Link>
-            <Link to={'/news'}>
-                <button style={{ color: isNewsPage ? 'white' : 'black' , backgroundColor: isNewsPage ? 'gray' : 'transparent' , borderRadius: '10px 10px 0 0',}}>
-                    News
-                </button>
-            </Link>
+            <div id='footer-right'>
+                <p>Copyright 2023 James Uebele</p>
+            </div>
         </footer>
     )
 }
