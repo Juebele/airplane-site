@@ -12,6 +12,7 @@ const Home = () => {
                 <h6>
                     “Adventure is worthwhile in itself.” - Amelia Earhart
                 </h6>
+                <div class='container-3'>
                 <Link to={'/Learning'}>
                     <button>
                         Learn more!
@@ -22,6 +23,7 @@ const Home = () => {
                         Read up on aviation news here!
                     </button>
                 </Link>
+                </div>
                 
             </div>
         </div>
