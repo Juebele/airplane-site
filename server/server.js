@@ -1,20 +1,20 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
-
-const { typeDefs, resolvers } = require('./schemas');
-const db = require('./config/connection');
-const PORT = process.env.port || 3001;
+const PORT = process.env.PORT || 3000;
 const app = express();
-const { authMiddleware } = require('./utils/auth');
+const connectDB = require('./config/db');
 
-const server = new ApolloServer({
-    typeDefs,
-    resolvers,
-    context: authMiddleware
-});
+// const server = new ApolloServer({
+//     typeDefs,
+//     resolvers,
+//     context: authMiddleware
+// });
 
 app.use(express.urlencoded({ extended: false }));
+
+//middleware for parsing json data
 app.use(express.json());
 
 if (process.env.NODE_ENV === 'production') {
@@ -25,17 +25,24 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(_dirname, '../client/build/index.html'));
 });
 
-const startApolloServer = async (typeDefs, resolvers) => {
-    await server.start();
-    server.applyMiddleware({ app });
+// const startApolloServer = async (typeDefs, resolvers) => {
+//     await server.start();
+//     server.applyMiddleware({ app });
 
-    db.once('open', () => {
-        app.listen(PORT, () => {
-            console.log(`API server running on port ${PORT}!`);
-            console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
-        });
-    });
-};
+//     db.once('open', () => {
+//         app.listen(PORT, () => {
+//             console.log(`API server running on PORT ${PORT}!`);
+//             console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+//         });
+//     });
+// };
 
   // Call the async function to start the server
-startApolloServer (typeDefs, resolvers);
+// startApolloServer (typeDefs, resolvers);
+
+connectDB().then(() => {
+    // Start the server once the connection is established
+    app.listen(PORT, () => {
+      console.log(`Server listening on PORT ${PORT}`);
+    });
+  });

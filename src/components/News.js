@@ -6,6 +6,7 @@ import Picture from '../Assets/airshow.jpg'
 const News = () => {
     return (
         <div>
+            {/* This is a hard-coded mockup of what a news article would look like */}
             <Header />
             <h1>The latest news is right here!</h1>
             <div class='article'>

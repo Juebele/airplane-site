@@ -15,7 +15,7 @@ import News from './components/News';
 function App() {
   return (
     <div>
-      {/* <Header /> */}
+      {/* This sets up URL routes for the different pages on the app */}
       <Router>
         <Routes>
           <Route

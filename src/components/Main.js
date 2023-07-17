@@ -19,6 +19,7 @@ export default function Main() {
     return (
         <div class='container-2'>
             <div>
+                {/* These buttons change the active tab */}
                 <button class='learning-button' onClick={() => handleTabClick(0)}>Aerodynamics</button>
                 <button class='learning-button' onClick={() => handleTabClick(1)}>Forces of Flight</button>
                 <button class='learning-button' onClick={() => handleTabClick(2)}>AoA, Stalls, and Spins</button>
@@ -27,6 +28,7 @@ export default function Main() {
             <div>
                 <div>
                     <div>
+                        {/* The active tab correlates to one of these tabs */}
                         {activeTab === 0 && <Aerodynamics />}
                         {activeTab === 1 && <FourForces />}
                         {activeTab === 2 && <StallsSpins />}

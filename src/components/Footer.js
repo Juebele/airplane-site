@@ -12,6 +12,7 @@ function Footer() {
     return (
         <footer class='container-footer'>
             <div id='footer-left'>
+                {/* These buttons change colors based on the active tab set by the route */}
                 <Link to={'/'}>
                     <button style={{ color: isHomePage ? 'white' : 'black', backgroundColor: isHomePage ? 'gray' : 'transparent', borderRadius: '0 10px 0 0', }}>
                         Home
