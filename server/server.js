@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3300;
 const app = express();
 const connectDB = require('./config/db');
 const BlogPost = require('./schemas/blogpost'); // Assuming the schema is in a file called blogPostModel.js
@@ -12,12 +12,6 @@ const newBlogPost = {
     title: 'Example Blog Post',
     body: 'This is the content of the blog post...',
 };
-
-// const server = new ApolloServer({
-//     typeDefs,
-//     resolvers,
-//     context: authMiddleware
-// });
 
 BlogPost.create(newBlogPost)
     .then((createdPost) => {
@@ -48,24 +42,19 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(_dirname, '../client/build/index.html'));
 });
 
-// const startApolloServer = async (typeDefs, resolvers) => {
-//     await server.start();
-//     server.applyMiddleware({ app });
-
-//     db.once('open', () => {
-//         app.listen(PORT, () => {
-//             console.log(`API server running on PORT ${PORT}!`);
-//             console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
-//         });
-//     });
-// };
-
 // Call the async function to start the server
 // startApolloServer (typeDefs, resolvers);
 
-connectDB().then(() => {
-    // Start the server once the connection is established
-    app.listen(PORT, () => {
+async function startServer() {
+    try {
+      await connectDB();
+      app.listen(PORT, () => {
         console.log(`Server listening on PORT ${PORT}`);
-    });
-});
+      });
+    } catch (error) {
+      console.error('Error connecting to MongoDB:', error);
+      process.exit(1);
+    }
+  }
+  
+  startServer();
