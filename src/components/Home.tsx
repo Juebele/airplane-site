@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-const Home = () => {
+const Home: React.FC = () => {
     return (
-        <div id='homepage-bg' class='home-text'>
+        <>
+        <div id='homepage-bg' className='home-text'>
             <div id='home-el'>
                 <h1>
                     Hangar 10
@@ -12,7 +13,7 @@ const Home = () => {
                 <h6>
                     “Adventure is worthwhile in itself.” - Amelia Earhart
                 </h6>
-                <div class='container-3'>
+                <div className='container-3'>
                 <Link to={'/Learning'}>
                     <button>
                         Learn more!
@@ -27,7 +28,8 @@ const Home = () => {
                 
             </div>
         </div>
-    )
-}
+        </>
+    );
+};
 
 export default Home;

@@ -3,7 +3,7 @@ const path = require('path');
 const PORT = process.env.PORT || 3300;
 const app = express();
 const connectDB = require('./config/db');
-const BlogPost = require('./schemas/blogpost'); // Assuming the schema is in a file called blogPostModel.js
+const BlogPost = require('../src/schemas/blogpost'); // Assuming the schema is in a file called blogPostModel.js
 
 const mongoose = require('mongoose');
 const { ApolloServer } = require('apollo-server-express');

@@ -17,13 +17,13 @@ export default function Main() {
     };
 
     return (
-        <div class='container-2'>
+        <div className='container-2'>
             <div>
                 {/* These buttons change the active tab */}
-                <button class='learning-button' onClick={() => handleTabClick(0)}>Aerodynamics</button>
-                <button class='learning-button' onClick={() => handleTabClick(1)}>Forces of Flight</button>
-                <button class='learning-button' onClick={() => handleTabClick(2)}>AoA, Stalls, and Spins</button>
-                <button class='learning-button' onClick={() => handleTabClick(3)}>Airspeed</button>
+                <button className='learning-button' onClick={() => handleTabClick(0)}>Aerodynamics</button>
+                <button className='learning-button' onClick={() => handleTabClick(1)}>Forces of Flight</button>
+                <button className='learning-button' onClick={() => handleTabClick(2)}>AoA, Stalls, and Spins</button>
+                <button className='learning-button' onClick={() => handleTabClick(3)}>Airspeed</button>
             </div>
             <div>
                 <div>

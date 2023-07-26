@@ -6,9 +6,9 @@ import LearningHeader from './sub-components/learning-header';
 
 const Header = () => {
     return (
-        <div class='container-1 header'>
+        <div className='container-1 header'>
             <div id='item-1'>
-                <button class='blank-button'>
+                <button className='blank-button'>
                     <Link to={'/'}>
                         <img id='image-1' src={logo} alt="Logo" />
                     </Link>

@@ -5,8 +5,8 @@ import lift from '../../Assets/airfoil.png'
 const Aerodynamics = () => {
     return (
         <div>
-            <img class='image' src={lift} />
-            <div class='content'>
+            <img className='image' src={lift} />
+            <div className='content'>
                 <h1>Aerodynamics</h1>
                 <p>Planes may seem like magic, soaring through the sky over our heads, defying gravity. Really though, as impressive as aircraft are, they are very simple in principle. To understand how planes fly, we first need to understand some things about the air around and above us. What seems to us to be empty space is really a fluid made up of the individual molecules of many different gases such as oxygen, nitrogen, and carbon dioxide, among others. Just as a swimmer can push against water to swim forward, backward, up, or down, an aircraft can push against the air to generate lift or thrust.</p>
                 <h2>Bernoulli Principle</h2>

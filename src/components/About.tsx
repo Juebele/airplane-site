@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import Header from '../components/Header'
+import Header from './Header'
 import Headshot from '../Assets/james-headshot.jpg'
 
 const About = () => {

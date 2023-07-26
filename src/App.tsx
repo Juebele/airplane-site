@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import logo from './Assets/hangar-icon-100.png';
 import './App.css';
 import Main from './components/Main';
 import Learning from './components/Learning';
@@ -12,16 +11,14 @@ import About from './components/About';
 import News from './components/News';
 
 
-function App() {
+const App: React.FC = () => {
   return (
+    <>
     <div>
       {/* This sets up URL routes for the different pages on the app */}
       <Router>
         <Routes>
-          <Route
-            path='/'
-            element={<Home />}
-          />
+          <Route path='/' element={<Home />} />
           <Route
             path="/learning"
             element={<Learning />}
@@ -38,7 +35,8 @@ function App() {
       <Footer />
       </Router>
     </div>
-  )
-}
+    </>
+  );
+};
 
 export default App;

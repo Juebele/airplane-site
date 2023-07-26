@@ -10,7 +10,7 @@ function Footer() {
     const isNewsPage = location.pathname === '/news'
 
     return (
-        <footer class='container-footer'>
+        <footer className='container-footer'>
             <div id='footer-left'>
                 {/* These buttons change colors based on the active tab set by the route */}
                 <Link to={'/'}>
