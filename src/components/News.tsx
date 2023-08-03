@@ -1,7 +1,7 @@
 import React from "react";
 import '../App.css';
 import Header from './Header';
-import Picture from '../Assets/airshow.jpg'
+const Picture = '../Assets/airshow.jpg'
 const BlogPost = require('../schemas/blogpost'); // Assuming the schema is in a file called blogPostModel.js
 
 const newBlogPost = {

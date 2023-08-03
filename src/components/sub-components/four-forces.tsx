@@ -1,13 +1,13 @@
 import React from 'react';
 import '../../App.css';
-import forces from '../../Assets/four-forces.png'
+const forces = '../../Assets/four-forces.png'
 
 
 const FourForces = () => {
     return (
         <div>
-            <img class='image' src={forces} />
-            <div class='content'>
+            <img className='image' src={forces} />
+            <div className='content'>
                 <h1>Four Forces of Flight</h1>
                 <p>There are four main forces that act on an airplane in flight, and you’ve probably heard of them already.</p>
                 <p>These four forces are lift, weight, thrust, and drag. These forces are like the four directions on a compass: each one has its polar opposite on the other side. Lift is balanced out by weight, and thrust is balanced out by drag.</p>

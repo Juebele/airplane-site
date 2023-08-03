@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.css';
-import lift from '../../Assets/airfoil.png'
+const lift = '../../Assets/airfoil.png'
 
 const Aerodynamics = () => {
     return (

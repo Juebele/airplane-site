@@ -1,17 +1,17 @@
 import React from 'react';
 import '../../App.css';
-import aoa from '../../Assets/angle-of-attack.png';
-import stalls from '../../Assets/stalls.png';
+const aoa = '../../Assets/angle-of-attack.png';
+const stalls = '../../Assets/stalls.png';
 
 const StallsSpins = () => {
     return (
         <div>
-            <img class='image' src={aoa} />
+            <img className='image' src={aoa} />
             <div>
                 <h1>Angle of Attack</h1>
                 <p>It’s time to learn a new term: Angle of Attack. This is the angle that the wing meets the oncoming air. When we first talked about how wings generate lift, we imagined the air coming straight on, but there’s no rule that that has to be the case. The way we measure the angle of attack is by drawing a line from the leading edge of the wing to the trailing edge; we’ll call this the chord line. We’ll compare this chord line to the oncoming air and the angle between the two lines is the angle of attack, which we can also write as “a" or “alpha”. Think of the angle of attack like the size of the “bite” that the wing is taking out of the air. When the angle of attack increases, the wing generates more lift because it’s taking a bigger bite out of the air. The wing doesn’t need to be perfectly aligned with the oncoming air because the air will stick to the wing and follow to curve. This is called the Coandă effect but it has its limits.</p>
             </div>
-            <img class='image' src={stalls} />
+            <img className='image' src={stalls} />
             <div>
                 <h1>Stalls</h1>
                 <p>The air will try to stick to the wing, but after a certain point the turn will be too sharp for the air to follow. This angle where the air can no longer follow the wing is called the critical angle of attack and past this point, the air over the wing becomes a mass of turbulent air instead of the smooth airflow we normally want. In this state, the wing will generate drag but basically no lift; we say that the wing is “stalled” when this happens. The only way to bring the wing out of a stall is by reducing the angle of attack below the critical angle of attack so that the normal airflow can be restored. The angle of attack is normally reduced by lowering the nose of the plane, but this means that we’ll have to give up altitude. For this reason, stalls at low altitude can be dangerous because we won’t have enough altitude to break the stall.</p>
