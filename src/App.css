@@ -156,7 +156,7 @@ button:hover {
 }
 
 #homepage-bg {
-  background: linear-gradient(90deg, var(--transparent1), var(--transparent6)), url(./Assets/hero-image.jpeg) center center / cover no-repeat;
+  background: linear-gradient(90deg, var(--transparent1), var(--transparent6)), url(./assets/hero-image.jpeg) center center / cover no-repeat;
   /* background-image: url(./Assets/hero-image.jpeg);
   background-size: cover;
   background-position: center center;

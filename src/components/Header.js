@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
 const react_router_dom_1 = require("react-router-dom");
 require("../App.css");
-const hangar_icon_100_png_1 = __importDefault(require("../Assets/hangar-icon-100.png"));
+const hangar_icon_100_png_1 = __importDefault(require("../assets/hangar-icon-100.png"));
 const learning_header_1 = __importDefault(require("./sub-components/learning-header"));
 const Header = () => {
     return (react_1.default.createElement("div", { className: 'container-1 header' },

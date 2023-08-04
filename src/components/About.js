@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
 require("../App.css");
 const Header_1 = __importDefault(require("./Header"));
-const james_headshot_jpg_1 = __importDefault(require("../Assets/james-headshot.jpg"));
+const james_headshot_jpg_1 = __importDefault(require('../assets/james-headshot.jpg'));
 const About = () => {
     return (react_1.default.createElement("div", null,
         react_1.default.createElement(Header_1.default, null),

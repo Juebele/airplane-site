@@ -12,7 +12,7 @@ export default function Main() {
 
     // Logic to change tabs when you click on the buttons
     const [activeTab, setActiveTab] = useState(0);
-    const handleTabClick = (index) => {
+    const handleTabClick = (index: number) => {
         setActiveTab(index);
     };
 

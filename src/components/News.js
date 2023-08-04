@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
 require("../App.css");
 const Header_1 = __importDefault(require("./Header"));
-const airshow_jpg_1 = __importDefault(require("../Assets/airshow.jpg"));
+const airshow_jpg_1 = __importDefault(require("../assets/airshow.jpg"));
 const BlogPost = require('../schemas/blogpost'); // Assuming the schema is in a file called blogPostModel.js
 const newBlogPost = {
     title: 'News page test',
