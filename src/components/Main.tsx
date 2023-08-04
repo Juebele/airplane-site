@@ -5,6 +5,7 @@ import FourForces from './sub-components/four-forces'
 import Aerodynamics from './sub-components/aerodynamics';
 import StallsSpins from './sub-components/stalls-spins';
 import Airspeed from './sub-components/airspeed';
+const Blogpost = require('../../server/models/blogPostModel')
 // import TestSubComponent from './sub-components/test-sub-component';
 
 

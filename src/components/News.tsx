@@ -2,7 +2,7 @@ import React from "react";
 import '../App.css';
 import Header from './Header';
 const Picture = '../Assets/airshow.jpg'
-const BlogPost = require('../schemas/blogpost'); // Assuming the schema is in a file called blogPostModel.js
+const BlogPost = require('../../server/models/blogPostModel')
 
 const createPost = () => {
     
