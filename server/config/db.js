@@ -1,9 +1,10 @@
 // db.js
 const mongoose = require('mongoose');
+const BlogPost = require('../models/blogPostModel');
 
 const dbUrl = 'mongodb://localhost:27017/airplaneDB';
 
-const connectDB = async () => {
+const connectToDatabase = async () => {
   try {
     await mongoose.connect(dbUrl, {
       useNewUrlParser: true,
@@ -16,4 +17,4 @@ const connectDB = async () => {
   }
 };
 
-module.exports = connectDB;
+module.exports = { connectToDatabase };

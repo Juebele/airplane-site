@@ -6,8 +6,33 @@ import Aerodynamics from './sub-components/aerodynamics';
 import StallsSpins from './sub-components/stalls-spins';
 import Airspeed from './sub-components/airspeed';
 const Blogpost = require('../../server/models/blogPostModel')
+const { connectToDatabase } = require('./db');
+
 // import TestSubComponent from './sub-components/test-sub-component';
 
+
+connectToDatabase()
+  .then(() => {
+    console.log('Connected to the database.');
+  })
+  .catch((error: any) => {
+    console.error('Error connecting to the database:', error);
+  });
+
+  const createPost = () => {
+    const newBlogPost = {
+      title: 'News page test',
+      body: 'This is a test on the news page...',
+    };
+  
+    BlogPost.create(newBlogPost)
+      .then((createdPost: any) => {
+        console.log('New blog post created:', createdPost);
+      })
+      .catch((error: any) => {
+        console.error('Error creating blog post:', error);
+      });
+  };
 
 export default function Main() {
 
