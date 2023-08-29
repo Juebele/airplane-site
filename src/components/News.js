@@ -12,13 +12,7 @@ const newBlogPost = {
     title: 'News page test',
     body: 'This is a test on the news page...',
 };
-BlogPost.create(newBlogPost)
-    .then((createdPost) => {
-    console.log('New blog post created:', createdPost);
-})
-    .catch((error) => {
-    console.error('Error creating blog post:', error);
-});
+
 const News = () => {
     return (react_1.default.createElement("div", null,
         react_1.default.createElement(Header_1.default, null),
@@ -28,6 +22,6 @@ const News = () => {
             react_1.default.createElement("h4", null, "This is the first time the event has ever been canceled"),
             react_1.default.createElement("img", { src: airshow_jpg_1.default }),
             react_1.default.createElement("p", null, "In a year filled with the anticipated return of numerous conventions and airshows, Russia's flagship biennial airshow - the 16th International Air and Space Salon (MAKS) 2023, was initially planned to be held for two days from July 23rd this year. However, the event's organizers have confirmed that it will be canceled this year."),
-            react_1.default.createElement("button", { onclick: "" }, "Create a new blog post!"))));
+            react_1.default.createElement("button", { onClick: "" }, "Create a new blog post!"))));
 };
 exports.default = News;

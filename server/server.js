@@ -1,60 +1,95 @@
 const express = require('express');
+const { MongoClient } = require('mongodb');
 const path = require('path');
-const PORT = process.env.PORT || 3300;
+const port = process.env.PORT || 3300;
 const app = express();
 const connectDB = require('./config/db');
-const BlogPost = require('../src/schemas/blogpost'); // Assuming the schema is in a file called blogPostModel.js
+const connectionStringURI = `mongodb://127.0.0.1:27017`;
 
-const mongoose = require('mongoose');
-const { ApolloServer } = require('apollo-server-express');
+const client = new MongoClient(connectionStringURI);
 
-const newBlogPost = {
-    title: 'Example Blog Post',
-    body: 'This is the content of the blog post...',
-};
+let db;
 
-BlogPost.create(newBlogPost)
-    .then((createdPost) => {
-        console.log('New blog post created:', createdPost);
-    })
-    .catch((error) => {
-        console.error('Error creating blog post:', error);
+const dbName = 'gooseDB';
+
+client.connect()
+    .then(() => {
+        console.log('Connected successfully to MongoDB');
+        db = client.db(dbName);
+        app.listen(port, () => {
+            console.log(`Goose app listening at http://localhost:${port}`);
+        });
     });
 
-BlogPost.find({})
-    .then((blogPosts) => {
-        console.log('All blog posts:', blogPosts);
-    })
-    .catch((error) => {
-        console.error('Error fetching blog posts:', error);
+    app.use(express.json());
+
+    app.post('/create', (req, res) => {
+        db.collection('gooseDB').insertOne(
+            { username: req.body.username, password: req.body.password }
+        )
+            .then(results => res.json(results))
+            .catch(err => {
+                if (err) throw err;
+            });
     });
 
-app.use(express.urlencoded({ extended: false }));
+    app.get('/read', (req, res) => {
+        db.collection('gooseDB')
+            .find()
+            .toArray()
+            .then(results => res.json(results))
+            .catch(err => {
+                if (err) throw err;
+            });
+    });
 
-//middleware for parsing json data
-app.use(express.json());
+// const newBlogPost = {
+//     title: 'Example Blog Post',
+//     body: 'This is the content of the blog post...',
+// };
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(_dirname, '../client/build')));
-}
+// BlogPost.create(newBlogPost)
+//     .then((createdPost) => {
+//         console.log('New blog post created:', createdPost);
+//     })
+//     .catch((error) => {
+//         console.error('Error creating blog post:', error);
+//     });
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(_dirname, '../client/build/index.html'));
-});
+// BlogPost.find({})
+//     .then((blogPosts) => {
+//         console.log('All blog posts:', blogPosts);
+//     })
+//     .catch((error) => {
+//         console.error('Error fetching blog posts:', error);
+//     });
 
-// Call the async function to start the server
-// startApolloServer (typeDefs, resolvers);
+// app.use(express.urlencoded({ extended: false }));
 
-async function startServer() {
-    try {
-      await connectDB();
-      app.listen(PORT, () => {
-        console.log(`Server listening on PORT ${PORT}`);
-      });
-    } catch (error) {
-      console.error('Error connecting to MongoDB:', error);
-      process.exit(1);
-    }
-  }
+// //middleware for parsing json data
+// app.use(express.json());
+
+// if (process.env.NODE_ENV === 'production') {
+//     app.use(express.static(path.join(_dirname, '../client/build')));
+// }
+
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(_dirname, '../client/build/index.html'));
+// });
+
+// // Call the async function to start the server
+// // startApolloServer (typeDefs, resolvers);
+
+// async function startServer() {
+//     try {
+//       await connectDB();
+//       app.listen(PORT, () => {
+//         console.log(`Server listening on PORT ${PORT}`);
+//       });
+//     } catch (error) {
+//       console.error('Error connecting to MongoDB:', error);
+//       process.exit(1);
+//     }
+//   }
   
-  startServer();
+//   startServer();
