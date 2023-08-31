@@ -24,6 +24,11 @@ const Home: React.FC = () => {
                         Read up on aviation news here!
                     </button>
                 </Link>
+                <Link to={'/Signup'}>
+                    <button>
+                        Sign up here!
+                    </button>
+                </Link>
                 </div>
                 
             </div>
